@@ -23,12 +23,12 @@ public class CardboardModeMgr : MonoBehaviour {
         Cardboard.SDK.TapIsTrigger = true;
     }
 
-   // The event handler to call to toggle Cardboard mode.
+   // Captura o evento do clique do botão e modifica a camera para VR mode.
     public void ChangeCardboardMode ()
     {
         CardboardHead head = mainCamera.GetComponent<CardboardHead>();
         if (Cardboard.SDK.VRModeEnabled) {
-            // disabling.  rotate back to the original rotation.
+            // Desabilita.
             head.transform.localRotation = Quaternion.identity;
         }
         Cardboard.SDK.VRModeEnabled = !Cardboard.SDK.VRModeEnabled;
