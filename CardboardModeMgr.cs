@@ -15,8 +15,7 @@ public class CardboardModeMgr : MonoBehaviour {
     
     public void Start()
     {
-        // Save a flag in the local player preferences to initialize VR mode
-        // This way when the app is restarted, it is in the mode that was last used.
+        // Salva a preferencia do jogador para inicializar em VR Mode.
         int doVR = PlayerPrefs.GetInt("VREnabled");
         Cardboard.SDK.VRModeEnabled = doVR == 1;
         CardboardHead head = mainCamera.GetComponent<CardboardHead>();
