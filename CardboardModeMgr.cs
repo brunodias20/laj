@@ -20,7 +20,6 @@ public class CardboardModeMgr : MonoBehaviour {
         Cardboard.SDK.VRModeEnabled = doVR == 1;
         CardboardHead head = mainCamera.GetComponent<CardboardHead>();
         head.enabled  = Cardboard.SDK.VRModeEnabled;
-        Cardboard.SDK.TapIsTrigger = true;
     }
 
    // Captura o evento do clique do botão e modifica a camera para VR mode.
